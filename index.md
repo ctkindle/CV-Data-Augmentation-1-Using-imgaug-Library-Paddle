@@ -157,7 +157,7 @@ for i in range(len(ops)):
 ```
 
 
-![](https://ai-studio-static-online.cdn.bcebos.com/6167f6a2b2844bd68772c1ec5ed04efd180d88931cb544c39c83c5b00966c31b)
+![png](output_4_0.png)
 
 
 上面我们分别用Image库和CV库实现明暗、对比度、饱和度、锐化、 裁切、翻转、旋转、和加噪的效果。
@@ -811,7 +811,7 @@ plt.show()
 
 【下面是我的主页链接】
 
-来AI Studio互粉吧  等你哦  [https://aistudio.baidu.com/aistudio/personalcenter/thirdview/76563](https://aistudio.baidu.com/aistudio/personalcenter/thirdview/76563)
+来AI Studio互粉吧 ~等你哦~ [https://aistudio.baidu.com/aistudio/personalcenter/thirdview/76563](https://aistudio.baidu.com/aistudio/personalcenter/thirdview/76563)
 
 【项目列表】
 

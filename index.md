@@ -700,7 +700,7 @@ plt.show()
 ```
 
 
-![](https://ai-studio-static-online.cdn.bcebos.com/0a393a20aec74ac7817b5a6c48b89e33f333a25733424ac0ba944480f94d4fa7)
+![](https://ai-studio-static-online.cdn.bcebos.com/a4fe3ea85e084f75bfead19e4ddbaf9a8c910fe86bb049adab1ee4addb6bbe93)
 
 
 哈哈，不用数据増广，模型的loss曲线果然上演“大劈叉”。上图中红色线条（实线为训练集，虚线为验证集）是没用数据増广时模型loss的变化曲线。从大概第6个eopoch开始，训练集loss（红实线）继续下降，而验证集loss（红虚线）开始“飞天表演”。这说明vgg模型的学习能力是很强的，几个回合就把训练数据学得明明白白，分（类）得清清楚楚。但一到训练集上跑预测，就错得一塌糊涂。也就是说模型训练时在不用数据増广的条件下出现了过拟合现象，没有学到足够正确的、泛化性能良好的分类特征。
@@ -741,7 +741,7 @@ plt.show()
 ```
 
 
-![](https://ai-studio-static-online.cdn.bcebos.com/a4fe3ea85e084f75bfead19e4ddbaf9a8c910fe86bb049adab1ee4addb6bbe93)
+![](https://ai-studio-static-online.cdn.bcebos.com/0886585f301746058b3982b597014731d11daf1c78e74f97bb9462be6a18854b)
 
 
 不用数据増广时（红色）：训练集（红实线）准确率30个epoch就升到了近乎100%，而验证集卡在了40%再也上不去。这么大的差距说明，和前面loss曲线反应的情况一样，模型出现了严重的过拟合。
@@ -752,7 +752,7 @@ plt.show()
 
 模型训练100轮后的结果：
 
-![](https://ai-studio-static-online.cdn.bcebos.com/0886585f301746058b3982b597014731d11daf1c78e74f97bb9462be6a18854b)
+![](https://ai-studio-static-online.cdn.bcebos.com/a371bb4336b44d0aa87d56c33ace2a1498d3e50f1e6d47fe948e236a0e2d2dfc)
 
 我们从实验结果看到，模型由于使用了合理的数据増广技术，训练100个epoch时的分类准曲率从36%提高到了65.3%,将近调高了一倍。这说明使用数据増广确实能够提升模型的性能。
 

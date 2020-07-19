@@ -1,4 +1,4 @@
-
+ 
 # 引言：为什么用图像数据増广（涨点呗）
 有人云：“一入AI深似海，深度学习出不来”。在玩耍各种令人“眼花缭乱”的奇妙模型模型时，可能不少小伙伴（包括我）就像还没当上齐天大圣的孙悟空一样，喜不自胜，以为有了这些耍模型本事就“可得长生了”。其实，深度学习是一门数据科学。要想练出“得永生的仙丹”除了熟稔那些数学的“奇技淫巧”（和信各种“哥”之外），大量的标注数据是必不可少的。往往，决定一个实际AI项目效果的不是技术，而是是否拥有足量完备的数据。如今，各大公司毫不吝啬的将最新的机器学习算法和软件包免费提供给用户，其原因在于如今算法领域的入门门槛并不高。稀缺的资源并不是算法、编程框架和机器学习包，而是高质量的数据。既然，数据这么重要、获得成本又高。那么，有什么不花钱还能充分发掘现有数据潜力的好办法么？数据増广就是解决这一问题的“数据炼金”妙方。
 
@@ -157,7 +157,7 @@ for i in range(len(ops)):
 ```
 
 
-![png](output_4_0.png)
+![](https://ai-studio-static-online.cdn.bcebos.com/6167f6a2b2844bd68772c1ec5ed04efd180d88931cb544c39c83c5b00966c31b)
 
 
 上面我们分别用Image库和CV库实现明暗、对比度、饱和度、锐化、 裁切、翻转、旋转、和加噪的效果。
@@ -178,7 +178,7 @@ for i in range(16):
 ```
 
 
-![png](output_6_0.png)
+![](https://ai-studio-static-online.cdn.bcebos.com/7b0595bc8d43467d94e62f6fcbd516fb14d49b9fdeb349a0bb3ec5bcb3184bc4)
 
 
 # 二、数据増广之鸟枪换炮（imgaug库使用介绍）
@@ -246,7 +246,7 @@ for i in range(2, 6):
 ```
 
 
-![png](output_10_0.png)
+![](https://ai-studio-static-online.cdn.bcebos.com/4adb4588eeca4368a64e2bb7811b986c92ac1b3e36474a0bb042d0c9edaebee3)
 
 
 再看看换成机关炮的效果：（能大幅提高分类任务精度）
@@ -420,7 +420,7 @@ for i in range(16):
 ```
 
 
-![png](output_12_0.png)
+![](https://ai-studio-static-online.cdn.bcebos.com/47a1b0e97d714b2684b21c538a6b3eadcd3aa464a685494cb946fb5c9e20ae21)
 
 
 下面这个则是“东北乱炖”的效果（叠加了本项目中用到的所有数据増广手段），试试看吃药治（loss曲线）劈叉是否“多多益善”。
@@ -441,7 +441,7 @@ for i in range(16):
 ```
 
 
-![png](output_14_0.png)
+![](https://ai-studio-static-online.cdn.bcebos.com/0a393a20aec74ac7817b5a6c48b89e33f333a25733424ac0ba944480f94d4fa7)
 
 
 # 三、看看“涨了多少点”（分类任务演示数据増广效果）
@@ -700,7 +700,7 @@ plt.show()
 ```
 
 
-![png](output_18_0.png)
+![](https://ai-studio-static-online.cdn.bcebos.com/0a393a20aec74ac7817b5a6c48b89e33f333a25733424ac0ba944480f94d4fa7)
 
 
 哈哈，不用数据増广，模型的loss曲线果然上演“大劈叉”。上图中红色线条（实线为训练集，虚线为验证集）是没用数据増广时模型loss的变化曲线。从大概第6个eopoch开始，训练集loss（红实线）继续下降，而验证集loss（红虚线）开始“飞天表演”。这说明vgg模型的学习能力是很强的，几个回合就把训练数据学得明明白白，分（类）得清清楚楚。但一到训练集上跑预测，就错得一塌糊涂。也就是说模型训练时在不用数据増广的条件下出现了过拟合现象，没有学到足够正确的、泛化性能良好的分类特征。
@@ -741,7 +741,7 @@ plt.show()
 ```
 
 
-![png](output_20_0.png)
+![](https://ai-studio-static-online.cdn.bcebos.com/a4fe3ea85e084f75bfead19e4ddbaf9a8c910fe86bb049adab1ee4addb6bbe93)
 
 
 不用数据増广时（红色）：训练集（红实线）准确率30个epoch就升到了近乎100%，而验证集卡在了40%再也上不去。这么大的差距说明，和前面loss曲线反应的情况一样，模型出现了严重的过拟合。
@@ -752,7 +752,7 @@ plt.show()
 
 模型训练100轮后的结果：
 
-![](https://ai-studio-static-online.cdn.bcebos.com/a371bb4336b44d0aa87d56c33ace2a1498d3e50f1e6d47fe948e236a0e2d2dfc)
+![](https://ai-studio-static-online.cdn.bcebos.com/0886585f301746058b3982b597014731d11daf1c78e74f97bb9462be6a18854b)
 
 我们从实验结果看到，模型由于使用了合理的数据増广技术，训练100个epoch时的分类准曲率从36%提高到了65.3%,将近调高了一倍。这说明使用数据増广确实能够提升模型的性能。
 
@@ -789,7 +789,7 @@ plt.show()
 ```
 
 
-![png](output_22_0.png)
+![](https://ai-studio-static-online.cdn.bcebos.com/0aa4948fbd0847b1bdc35b56914692dc6fe9d7e3e916406a81395458c61c73a6)
 
 
 上面这张图中，红线是模型先应用我们自己实现的“简单数据増广”，后应用imgaug库实现的数据増广的条件下，训练集和验证集的acc曲线。绿线是按照相反的顺序应用这两种数据増广的条件下，训练集和验证集的acc曲线。通过将这张图表和前一张acc曲线的图表结合在一起分析，我得出了以下认识：
@@ -811,7 +811,7 @@ plt.show()
 
 【下面是我的主页链接】
 
-来AI Studio互粉吧 ~等你哦~ [https://aistudio.baidu.com/aistudio/personalcenter/thirdview/76563](https://aistudio.baidu.com/aistudio/personalcenter/thirdview/76563)
+来AI Studio互粉吧 等你哦 [https://aistudio.baidu.com/aistudio/personalcenter/thirdview/76563](https://aistudio.baidu.com/aistudio/personalcenter/thirdview/76563)
 
 【项目列表】
 
